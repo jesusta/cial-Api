@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          
+        </li>
+        <li class="nav-item">
+          
+        </li>
+        <li class="nav-item dropdown">
+          
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+        
+        </li>
+      </ul>
+      <form class="d-flex">
+        
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+<div class="card text-white bg-dark mb-3" style="max-width: 75%; margin: 4% 0 0 12%;">
+    <div class="card-body">
+      <h5 class="card-title"><h2 style="margin: 0% 0 0 1%;">Editando el post</h2></h5>
+      <h4 style="margin: 0 0 0 1%;">pais</h4>
+      <select class="form-select" aria-label="Default select example" style="width: 21%; margin: -3% 0 0 7%;">
+        <option selected disabled>--Seleccione el pais--</option>
+        <option value="{{item.ISO2}}" *ngFor="let item of country">{{item.Country}}</option>
+       
+      </select>
+      <button type="button" (click)="atras()" class="btn btn-info" style="margin: -7.2% 0 0 35%;">Regresar</button>
+
+
+      <h4 style="margin: 2% 0 0 1%;">usuario:</h4>
+
+      <div class="input-group mb-3" style="width: 20%; margin: -3.2% 0 0 12%;">
+        <input type="text" class="form-control" [value]="pots.user_id" placeholder="usuario" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+      <h4 style="margin: 2% 0 0 12%;">Titulo</h4>
+
+      <div class="card text-dark bg-light mb-3" style="max-width: 60%; margin: 1% 0 0 12%;">
+        <div class="card-body">
+          <p class="card-text">{{pots.title}}</p>
+        </div>
+      </div>
+
+      <h4 style="margin: 3% 0 0 12%;">Body</h4>
+
+      <div class="card text-dark bg-light mb-3" style="max-width: 80%; margin: 1% 0 0 12%;">
+        <div class="card-body">
+          <p class="card-text">{{pots.body}}</p>
+        </div>
+      </div>
+
+    </div>
+</div>
